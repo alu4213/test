@@ -1,14 +1,13 @@
 language: python
 
 python:
-	-"2.7"
-
+  -"2.7"
 env:
-	-DJANGO=1.4.3 DB=mysql
+  -DJANGO=1.4.3 DB=mysql
 
 install:
-	-pip install -q Django==$DJANGO --use-mirrors
-	-pip install -q .--use-mirrors
-	-pip install -q -r requirements.txt --use-mirrors
+  -pip install -q Django==$DJANGO --use-mirrors
+  -pip install -q .--use-mirrors
+  -pip install -q -r requirements.txt --use-mirrors
 
-script:python manage.py harvest
+script: python manage.py harvest
